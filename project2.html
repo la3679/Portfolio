@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css"> 
+    <script src="static/js/script.js" defer></script>
+    <title>Price Compare Plus</title>
+    <style>
+        /* Scoped CSS for the Carousel */
+        .carousel-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="project-detail">
+            <h2>Price Compare Plus</h2>
+
+            <div class="github-link">
+                <p>View the source code for Price Compare Plus on GitHub:</p>
+                <a href="https://github.com/la3679/Price-Compare-Plus" target="_blank">https://github.com/la3679/Price-Compare-Plus</a>
+            </div>
+
+            <div class="project-overview">
+                <p>
+                    Price Compare Plus is a mobile application designed to help users find the
+                    best deals on products by comparing prices across multiple e-commerce
+                    platforms in real-time. The app also offers features like price drop
+                    alerts, personalized recommendations, and currency conversion for global
+                    shopping. It’s an intuitive solution for users looking to save both time
+                    and money.
+                </p>
+                <p>
+                    This project addresses the growing demand for smarter online shopping
+                    tools by integrating multiple retailer APIs and providing a seamless user
+                    experience. With its microservices architecture, Price Compare Plus
+                    ensures scalability and reliability, even under high traffic conditions.
+                </p>
+            </div>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>
+                    <strong>Real-Time Price Comparison:</strong> Instant comparison of product
+                    prices across various e-commerce platforms like Amazon, Walmart, and eBay.
+                </li>
+                <li>
+                    <strong>Price Drop Alerts:</strong> Notifications for price changes on
+                    tracked products to help users grab the best deals.
+                </li>
+                <li>
+                    <strong>Personalized Recommendations:</strong> AI-powered recommendations
+                    based on user browsing and purchase history.
+                </li>
+                <li>
+                    <strong>Wishlist Management:</strong> Save favorite products and receive
+                    updates on their prices and availability.
+                </li>
+                <li>
+                    <strong>Secure Transactions:</strong> Direct links to trusted e-commerce
+                    platforms for safe and secure purchases.
+                </li>
+                <li>
+                    <strong>Multi-Currency Support:</strong> Real-time currency conversion for
+                    international shoppers.
+                </li>
+            </ul>
+
+            <h3>Application Screenshots</h3>
+            <section class="carousel">
+                <div class="carousel-container">
+                    <img src="static/images/Cart_PCP.png" alt="Cart Screen">
+                    <img src="static/images/CartUpdateQuantity_PCP.png" alt="Update Quantity">
+                    <img src="static/images/FavRemove_PCP.png" alt="Remove Favorites">
+                    <img src="static/images/Home_Page_2_PCP.png" alt="Home Page">
+                    <img src="static/images/Login_2_PCP.png" alt="Login Page">
+                    <img src="static/images/ProductDescription_2y_PCP.png" alt="Product Description">
+                    <img src="static/images/Products_2_PCP.png" alt="Product List">
+                    <img src="static/images/SignUp_PCP.png" alt="Sign Up Page">
+                </div>
+                <div class="carousel-controls">
+                    <button id="prev">Previous</button>
+                    <button id="next">Next</button>
+                </div>
+            </section>
+
+            <h3>Architecture</h3>
+            <p>
+                The application is built on a microservices architecture to ensure
+                modularity and scalability. Each microservice handles a specific
+                functionality, such as fetching prices, managing notifications, or
+                processing user preferences. This architecture allows independent scaling
+                and enhances the app's fault tolerance.
+            </p>
+            <div class="project-image">
+                <img
+                    src="static/images/Architecture_Diagram_PCP.png"
+                    alt="Price Compare Plus Microservices Architecture"
+                />
+                <figcaption>
+                    Figure 1: Price Compare Plus Microservices Architecture
+                </figcaption>
+            </div>
+            <ul>
+                <li>
+                    <strong>Frontend:</strong> React Native for a responsive and
+                    cross-platform user interface.
+                </li>
+                <li>
+                    <strong>Backend:</strong> Python Flask for API management and data
+                    processing.
+                </li>
+                <li>
+                    <strong>Database:</strong> PostgreSQL for storing product details, user
+                    preferences, and transaction logs.
+                </li>
+            </ul>
+
+            <h3>Implementation Details</h3>
+            <p>
+                The app integrates with retailer APIs to fetch product details, prices, and
+                availability. A centralized API gateway manages all external communications,
+                ensuring data consistency and reliability. Advanced caching mechanisms are
+                employed to reduce API call latency and improve performance under high user
+                traffic.
+            </p>
+            <h4>Technical Highlights:</h4>
+            <ul>
+                <li>
+                    <strong>API Gateway:</strong> Centralized routing of API requests to
+                    appropriate microservices.
+                </li>
+                <li>
+                    <strong>Notification Engine:</strong> Tracks price changes and sends
+                    real-time alerts to users.
+                </li>
+                <li>
+                    <strong>AI Recommendations:</strong> Machine learning models analyze user
+                    behavior to suggest relevant products.
+                </li>
+            </ul>
+
+            <h3>Challenges and Outcomes</h3>
+            <p>
+                The major challenge was handling inconsistencies in data formats from
+                various retailer APIs. To address this, a standardized data pipeline was
+                implemented, ensuring all retrieved data adhered to a uniform schema.
+                Additionally, optimizing the AI recommendation system for diverse user
+                preferences required extensive testing and tuning.
+            </p>
+            <h4>Outcomes:</h4>
+            <ul>
+                <li>
+                    Reduced product search time by 50% for users, as compared to manually
+                    browsing multiple platforms.
+                </li>
+                <li>Achieved a 98% accuracy rate in price comparisons during testing.</li>
+                <li>
+                    Enhanced user retention by 40% due to personalized recommendations and
+                    price alerts.
+                </li>
+            </ul>
+
+            <h3>Future Enhancements</h3>
+            <ul>
+                <li>
+                    Integration with voice assistants like Alexa and Google Assistant for
+                    hands-free shopping.
+                </li>
+                <li>
+                    Support for augmented reality (AR) to visualize products in real-world
+                    settings.
+                </li>
+                <li>
+                    Enhanced analytics for retailers to optimize pricing strategies based on
+                    user behavior insights.
+                </li>
+            </ul>
+
+            <h3>Team Members</h3>
+            <ul>
+                <li>Kush Jayesh Ahir</li>
+                <li>Love Jayesh Ahir</li>
+                <li>Shridhar Vilas Shinde</li>
+                <li>Bharathi Pandurangan</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Love Jayesh Ahir | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="static/js/script.js" defer></script>
+    <title>Sentiment Analysis Application</title>
+    <style>
+        .carousel-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .carousel {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="project-detail">
+            <h2>Sentiment Analysis Application</h2>
+
+            <!-- Overview -->
+            <div class="project-overview">
+                <h3>Overview</h3>
+                <p>
+                    The Sentiment Analysis Application is a cutting-edge platform leveraging advanced AI and natural language processing (NLP)
+                    technologies to analyze and classify sentiments from textual data. This system is designed for enterprises, researchers, and
+                    individual users who aim to gain actionable insights from customer reviews, social media trends, and other text-based inputs.
+                </p>
+                <p>
+                    Built on AWS Cloud services, the application ensures real-time processing, batch operations, and seamless scalability. It enables
+                    businesses to monitor sentiment trends over time, track customer satisfaction, and make informed decisions. The intuitive
+                    visualization dashboard makes it easy for non-technical users to interpret results and identify trends.
+                </p>
+            </div>
+
+            <!-- Problem Statement -->
+            <h3>Problem Statement</h3>
+            <p>
+                In an era where organizations handle vast amounts of textual data, extracting meaningful insights is a significant challenge. Current tools often fail to:
+            </p>
+            <ul>
+                <li>Provide accurate real-time sentiment classification.</li>
+                <li>Support multi-language analysis for global usability.</li>
+                <li>Deliver scalable solutions for processing large datasets efficiently.</li>
+                <li>Offer intuitive visualizations for non-technical decision-makers.</li>
+            </ul>
+
+            <!-- Solution -->
+            <h3>Solution</h3>
+            <p>
+                The Sentiment Analysis Application addresses these challenges with a comprehensive solution that combines:
+            </p>
+            <ul>
+                <li><strong>Real-Time Analysis:</strong> Immediate sentiment classification using AWS Comprehend.</li>
+                <li><strong>Scalable Architecture:</strong> Serverless computing ensures adaptability for varying workloads.</li>
+                <li><strong>Multi-Language Support:</strong> Expands the application’s reach across different regions and languages.</li>
+                <li><strong>Interactive Visualizations:</strong> An intuitive dashboard powered by ReactJS and D3.js for actionable insights.</li>
+            </ul>
+
+            <!-- Key Features -->
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Real-Time Sentiment Analysis:</strong> Processes and classifies text as positive, negative, or neutral instantly.</li>
+                <li><strong>Multi-Language Support:</strong> Analyze text in various languages for global usability.</li>
+                <li><strong>Interactive Dashboard:</strong> Dynamic visualizations provide clear and actionable insights.</li>
+                <li><strong>Batch Processing:</strong> Efficiently handles large datasets, making it ideal for enterprise use cases.</li>
+                <li><strong>API Integration:</strong> Secure endpoints allow seamless integration with external systems.</li>
+            </ul>
+
+            <!-- Carousel -->
+            <h3>Application Screenshots</h3>
+            <section class="carousel">
+                <div class="carousel-container">
+                    <img src="static/images/APS_1.png" alt="Screenshot 1">
+                    <img src="static/images/APS_2.png" alt="Screenshot 2">
+                    <img src="static/images/APS_3.png" alt="Screenshot 3">
+                </div>
+                <div class="carousel-controls">
+                    <button id="prev">Previous</button>
+                    <button id="next">Next</button>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <h3>System Architecture</h3>
+            <p>
+                The Sentiment Analysis Application is built on a serverless architecture leveraging AWS services for scalability, cost-efficiency, and reliability. Below is an in-depth discussion of each component within the architecture diagram:
+            </p>
+            <div class="project-image">
+                <img src="static/images/APS_Arch.png" alt="System Architecture Diagram">
+                <figcaption>Figure 1: Sentiment Analysis Application Architecture</figcaption>
+            </div>
+
+            <h4>1. Frontend Layer</h4>
+            <p>
+                The user interface is built using ReactJS, providing a responsive and intuitive experience. The frontend allows users to:
+            </p>
+            <ul>
+                <li>Input text for real-time sentiment analysis.</li>
+                <li>Upload large datasets for batch processing.</li>
+                <li>Visualize results through interactive graphs and charts.</li>
+            </ul>
+
+            <h4>2. Backend Layer</h4>
+            <p>
+                Python Flask APIs act as the middleware, orchestrating communication between the frontend and AWS services. The backend handles:
+            </p>
+            <ul>
+                <li>Receiving and processing user inputs.</li>
+                <li>Invoking AWS Comprehend for NLP tasks.</li>
+                <li>Managing authentication and secure data transfer via AWS Cognito.</li>
+            </ul>
+
+            <h4>3. AWS Comprehend</h4>
+            <p>
+                This service performs the core sentiment analysis. AWS Comprehend’s pre-trained NLP models provide high accuracy in:
+            </p>
+            <ul>
+                <li>Classifying sentiments as positive, negative, or neutral.</li>
+                <li>Identifying key phrases, entities, and language detection.</li>
+            </ul>
+
+            <h4>4. AWS Lambda</h4>
+            <p>
+                Lambda functions enable serverless execution of workflows, ensuring scalability and cost-efficiency. Key tasks include:
+            </p>
+            <ul>
+                <li>Processing textual data in real-time.</li>
+                <li>Triggering workflows for batch operations.</li>
+            </ul>
+
+            <h4>5. Amazon S3</h4>
+            <p>
+                Amazon S3 serves as the primary storage solution for:
+            </p>
+            <ul>
+                <li>Raw text inputs uploaded by users.</li>
+                <li>Processed data and results for visualization.</li>
+            </ul>
+
+            <h4>6. DynamoDB</h4>
+            <p>
+                This NoSQL database stores structured sentiment data for:
+            </p>
+            <ul>
+                <li>Efficient retrieval during visualization.</li>
+                <li>Maintaining user-specific data for personalized insights.</li>
+            </ul>
+
+            <h4>7. Visualization Layer</h4>
+            <p>
+                Built with D3.js and ReactJS, the visualization layer provides:
+            </p>
+            <ul>
+                <li>Real-time trend graphs showing sentiment evolution.</li>
+                <li>Heatmaps for localized sentiment analysis.</li>
+            </ul>
+
+            <h3>Implementation Details</h3>
+            <p>
+                The application seamlessly integrates the above components to deliver real-time and batch sentiment analysis.
+            </p>
+
+            <h3>Challenges and Solutions</h3>
+            <p>
+                <strong>Challenge 1:</strong> Supporting multi-language sentiment analysis without compromising performance.
+                <br>
+                <strong>Solution:</strong> AWS Comprehend’s multi-language capabilities ensured efficient processing for diverse inputs.
+            </p>
+            <p>
+                <strong>Challenge 2:</strong> Designing a user-friendly visualization dashboard for non-technical users.
+                <br>
+                <strong>Solution:</strong> Multiple iterations and usability tests resulted in an intuitive design that enhances user engagement.
+            </p>
+
+            <!-- Outcomes -->
+            <h3>Outcomes</h3>
+            <ul>
+                <li>Achieved 95%+ accuracy in sentiment classification during testing.</li>
+                <li>Reduced processing time by 60% for large datasets using batch workflows.</li>
+                <li>Improved user engagement through an interactive and visually appealing dashboard.</li>
+            </ul>
+
+            <!-- Future Enhancements -->
+            <h3>Future Enhancements</h3>
+            <ul>
+                <li>Expand language support to include low-resource languages.</li>
+                <li>Introduce emotion classification (e.g., happy, sad, angry) for deeper insights.</li>
+                <li>Enable real-time sentiment analysis of social media trends.</li>
+            </ul>
+
+            <!-- Team Members -->
+            <h3>Team Members</h3>
+            <ul>
+                <li>Vaishnavi Patil</li>
+                <li>Divya Hinge</li>
+                <li>Omkar Chavan</li>
+                <li>Love Ahir</li>
+                <li>Ayush Setpal</li>
+            </ul>
+
+            <!-- GitHub Repository -->
+            <h3>GitHub Repository</h3>
+            <p>
+                This project is hosted in a private GitHub repository. Access the code here:
+                <a href="https://github.com/la3679/AmazonProduct-Review-Sentiment-Analysis" target="_blank">Amazon Product Review Sentiment Analysis</a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Love Ahir | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css"> 
+    <script src="static/js/script.js" defer></script>
+    <title>NutriKit</title>
+    <style>
+        /* General styles for all project images */
+        .project-detail .project-image img {
+            width: 80%;
+            max-width: 1000px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Specific style for NutriKit Architecture image */
+        .project-detail .project-image img[src="images/Nutrikit_Arch.png"] {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="project-detail">
+            <h2>NutriKit</h2>
+
+            <!-- GitHub Link -->
+            <div class="github-link">
+                <p>View the source code for NutriKit on GitHub:</p>
+                <a href="https://github.com/la3679/Nutrikit" target="_blank">https://github.com/la3679/Nutrikit</a>
+            </div>
+            
+            <!-- Overview -->
+            <div class="project-overview">
+                <p>
+                    NutriKit is an advanced dietary management application designed to enable users to track and optimize their nutritional intake. The platform 
+                    provides dynamic meal planning tools and comprehensive tracking for proteins, carbohydrates, and fats, making it a one-stop solution for 
+                    health-conscious individuals and fitness enthusiasts.
+                </p>
+                <p>
+                    This project aims to bridge the gap between professional diet planning and user-friendly digital tools by incorporating scientific data with 
+                    intuitive interfaces. NutriKit is not just an app but a holistic approach to achieving nutritional goals.
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Personalized Meal Plans:</strong> Tailor-made suggestions based on user preferences, allergies, and goals.</li>
+                <li><strong>Detailed Nutritional Tracking:</strong> Track every meal's protein, fat, carbohydrate, and calorie content.</li>
+                <li><strong>Goal-Based Planning:</strong> Adjusts recommendations for weight loss, muscle building, or health maintenance.</li>
+                <li><strong>Progress Visualization:</strong> Graphs and charts to display daily, weekly, and monthly progress.</li>
+                <li><strong>Food Database Integration:</strong> A vast database powered by APIs ensures accurate calorie counts and macronutrient values.</li>
+            </ul>
+
+            <!-- Architecture -->
+            <h3>Architecture</h3>
+            <p>
+                NutriKit is built using the MVVM (Model-View-ViewModel) architecture. This approach ensures a clear separation of concerns, allowing for 
+                easier maintenance and scalability. The core system consists of three primary layers:
+            </p>
+            <ul>
+                <li><strong>Model:</strong> Manages the application's data and business logic, using PostgreSQL for secure and efficient data storage.</li>
+                <li><strong>View:</strong> Implements the user interface in React, ensuring a responsive and intuitive design.</li>
+                <li><strong>ViewModel:</strong> Acts as an intermediary between the Model and View, handling user input and updating the UI dynamically.</li>
+            </ul>
+            <div class="project-image">
+                <img src="static/images/Nutrikit_Arch.png" alt="NutriKit Architecture Diagram">
+                <figcaption>Figure 1: NutriKit Architecture Diagram</figcaption>
+            </div>
+
+            <!-- Implementation Details -->
+            <h3>Implementation Details</h3>
+            <p>
+                The backend, built in Python Flask, manages user authentication, dietary data processing, and API interactions. The PostgreSQL database 
+                handles data storage, ensuring data integrity and supporting complex queries for meal planning algorithms.
+            </p>
+            <h4>Technical Modules:</h4>
+            <ul>
+                <li><strong>User Management:</strong> Handles user registration, authentication, and profile management.</li>
+                <li><strong>Meal Planner:</strong> Generates balanced meal plans dynamically.</li>
+                <li><strong>Tracker:</strong> Logs and visualizes user dietary data.</li>
+            </ul>
+            <div class="project-image">
+                <img src="static/images/Nutrikit_Impl.png" alt="NutriKit Implementation Details">
+                <figcaption>Figure 2: NutriKit Implementation Diagram</figcaption>
+            </div>
+
+            <!-- Challenges and Outcomes -->
+            <h3>Challenges and Outcomes</h3>
+            <p>
+                Integrating a reliable food database with accurate nutritional information was a primary challenge, resolved using a trusted third-party API. 
+                Optimizing the meal planning algorithm required extensive testing and resulted in a user-defined weighted scoring system.
+            </p>
+            <h4>Outcomes:</h4>
+            <ul>
+                <li>Achieved over 90% user satisfaction during beta testing for ease of use and functionality.</li>
+                <li>Reduced meal planning time by 75% compared to traditional methods.</li>
+                <li>Improved adherence to dietary goals by 60% during a three-month trial period.</li>
+            </ul>
+
+            <!-- Future Enhancements -->
+            <h3>Future Enhancements</h3>
+            <ul>
+                <li>Integration with wearable fitness devices for real-time activity tracking and calorie adjustments.</li>
+                <li>Support for regional recipes and dietary habits to cater to a broader user base.</li>
+                <li>Advanced analytics to provide insights into long-term dietary trends.</li>
+            </ul>
+
+            <!-- Team Members -->
+            <h3>Team Members</h3>
+            <ul>
+                <li>Abdul Ahad Khan</li>
+                <li>Jheel Nikulkumar Patel</li>
+                <li>Love Jayesh Ahir</li>
+                <li>Taha Draoui</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Love Jayesh Ahir | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

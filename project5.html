@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="static/js/script.js" defer></script>
+    <link rel="stylesheet" href="static/css/styles.css"> 
+    <title>University Management System</title>
+    <style>
+        /* Scoped CSS for the Carousel (Keep this inline for now) */
+        .carousel-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .carousel {
+            width: 100%;
+        }
+
+        /* Other basic styling (Can be moved to external CSS later) */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        h2, h3, h4 {
+            margin-top: 2em;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="project-detail">
+    <h2>University Management System</h2>
+
+    <div class="github-link">
+        <p>View the source code for University Management System on GitHub:</p>
+        <a href="https://github.com/la3679/College-Recommendation" target="_blank">https://github.com/la3679/College-Recommendation</a>
+    </div>
+
+    <div class="project-overview">
+        <p>
+            The University Management System (UMS) is a comprehensive solution designed to streamline and automate administrative and
+            academic processes
+            within universities. It integrates functionalities such as student enrollment, faculty assignments, course management, and
+            performance
+            tracking into a single platform. The system enhances operational efficiency and reduces manual workload, making it an essential
+            tool for
+            modern educational institutions.
+        </p>
+        <p>
+            This project caters to the needs of students, faculty, and administrators by providing a user-friendly interface, robust backend
+            systems,
+            and advanced analytics tools. It serves as a one-stop solution for managing the complex workflows associated with university
+            operations.
+        </p>
+    </div>
+
+    <h3>Key Features</h3>
+    <ul>
+        <li>
+            <strong>Student Management:</strong> Facilitates student enrollment, maintains academic records, and tracks progress throughout
+            their
+            academic journey.
+        </li>
+        <li>
+            <strong>Faculty Module:</strong> Enables faculty to manage their schedules, update course content, and monitor student
+            performance.
+        </li>
+        <li>
+            <strong>Course Management:</strong> Allows for the creation, modification, and management of courses, including scheduling and
+            syllabus
+            updates.
+        </li>
+        <li>
+            <strong>Attendance Tracking:</strong> Monitors student attendance in real-time, integrating with classroom IoT devices for
+            automation.
+        </li>
+        <li>
+            <strong>Gradebook:</strong> Maintains a comprehensive record of grades and generates reports for students, faculty, and
+            administrators.
+        </li>
+        <li>
+            <strong>Event Management:</strong> Organizes and tracks university events, providing a central calendar for all stakeholders.
+        </li>
+    </ul>
+
+    <h3>Architecture</h3>
+    <p>
+        The system is built on a three-tier architecture, ensuring scalability, security, and maintainability. The three layers are:
+    </p>
+    <ul>
+        <li>
+            <strong>Presentation Layer:</strong> A responsive web-based frontend developed using ReactJS, offering an intuitive user
+            experience
+            for students, faculty, and administrators.
+        </li>
+        <li>
+            <strong>Application Layer:</strong> Powered by Node.js, it handles business logic, API management, and user authentication.
+        </li>
+        <li>
+            <strong>Data Layer:</strong> Utilizes PostgreSQL for data persistence, ensuring secure and efficient storage of university data.
+        </li>
+    </ul>
+    <div class="project-image">
+        <img src="static/images/UCR_flow.png" alt="UMS Architecture Diagram">
+        <figcaption>Figure 1: University Management System Architecture</figcaption>
+    </div>
+
+    <h3>Implementation Details</h3>
+    <p>
+        The development of the UMS followed an agile methodology, with iterative cycles of planning, development, testing, and
+        deployment. The
+        system was designed to ensure high availability and fault tolerance, incorporating advanced features like load balancing and
+        database
+        replication.
+    </p>
+    <h4>Modules:</h4>
+    <ul>
+        <li>
+            <strong>User Authentication:</strong> Implements secure login and role-based access control for students, faculty, and
+            administrators.
+        </li>
+        <li>
+            <strong>Course Scheduler:</strong> Generates dynamic schedules based on faculty availability and classroom resources.
+        </li>
+        <li>
+            <strong>Grade Analytics:</strong> Provides insights into student performance, identifying trends and areas for improvement.
+        </li>
+    </ul>
+
+    <h3>Challenges and Resolutions</h3>
+    <p>
+        One of the major challenges was managing the integration of multiple modules while ensuring data consistency across the system.
+        This was
+        resolved by implementing an event-driven architecture that uses message queues for inter-module communication. Another challenge
+        was
+        optimizing real-time attendance tracking, which was addressed through the integration of IoT devices with RESTful APIs.
+    </p>
+
+    <h3>Results and Impact</h3>
+    <ul>
+        <li><strong>Operational Efficiency:</strong> Reduced administrative workload by 40% through process automation.</li>
+        <li><strong>Student Engagement:</strong> Improved student participation in academic activities by 25% through real-time
+            notifications and
+            performance tracking.</li>
+        <li><strong>Faculty Productivity:</strong> Enabled faculty to manage their schedules and grading more efficiently, saving an
+            average of 5
+            hours per week.</li>
+    </ul>
+
+    <h3>Results</h3>
+    <section class="carousel">
+        <div class="carousel-container">
+            <img src="static/images/UCR_1.png" alt="Results 1">
+            <img src="static/images/UCR_2.png" alt="Results 2">
+        </div>
+        <div class="carousel-controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </section>
+
+    <h3>Future Enhancements</h3>
+    <ul>
+        <li>Develop a mobile application for improved accessibility and convenience.</li>
+        <li>Incorporate AI-driven predictive analytics to identify at-risk students and suggest personalized learning paths.</li>
+        <li>Integrate support for additional languages to cater to diverse student demographics.</li>
+        <li>Expand IoT integration to include automated resource allocation for classrooms and labs.</li>
+    </ul>
+
+    <h3>Use Cases</h3>
+    <ul>
+        <li><strong>Universities:</strong> Manage academic operations, faculty schedules, and student performance tracking.</li>
+        <li><strong>Faculty:</strong> Organize courses, track attendance, and monitor student grades efficiently.</li>
+        <li><strong>Students:</strong> Access course materials, track academic progress, and stay updated on university events.</li>
+    </ul>
+
+    <h3>Team Members</h3>
+    <ul>
+        <li>Love Jayesh Ahir</li>
+    </ul>
+</section>
+
+<script src="static/js/your-script.js"></script>
+
+</body>
+</html>

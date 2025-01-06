@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="static/js/script.js" defer></script>
+    <title>Automated Test Oracle Generation</title>
+    <style>
+        .carousel-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .carousel {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="project-detail">
+            <h2>Automated Test Oracle Generation using Neural Methods</h2>
+
+            <!-- Overview -->
+            <div class="project-overview">
+                <h3>Overview</h3>
+                <p>
+                    This project addresses a critical challenge in software development: the
+                    creation of effective test oracles. Manual generation of test oracles is
+                    labor-intensive and prone to errors. By leveraging neural networks, this
+                    project automates the creation of two types of test oracles—exceptional
+                    and assertion oracles. These oracles validate software behavior, ensuring
+                    reliability and correctness while reducing manual effort.
+                </p>
+                <p>
+                    However, it is important to note that this project is not our original work. It was forked from <a href="https://github.com/microsoft/toga" target="_blank">Microsoft's TOGA repository</a>, and the original paper can be accessed at <a href="https://dl.acm.org/doi/10.1145/3510003.3510141" target="_blank">Original TOGA Paper</a>. The purpose of our work was to replicate the original TOGA results and evaluate whether adding method implementations to the evaluation setup would alter the results. This project builds upon the findings from the original TOGA paper and introduces slight modifications to analyze their impact.
+                </p>
+                <p>
+                    The GitHub repository for this project, under a collaborator's name, is available <a href="https://github.com/pateljheel/swen777-rp-toga" target="_blank">here</a>. I actively participated in this work, and rather than forking the repository, we directly contributed to the implementation and evaluation.
+                </p>
+            </div>
+
+            <!-- Background and Motivation -->
+            <h3>Background and Motivation</h3>
+            <p>
+                Test oracles are essential for verifying software functionality. However,
+                creating them manually is a bottleneck in agile development cycles. Existing
+                tools often fail to achieve complete coverage or handle edge cases
+                effectively. This project builds on the success of TOGA (Test Oracle
+                Generation Application), exploring transformer-based neural networks for
+                automating oracle creation.
+            </p>
+            <p>
+                Key motivations include improving the accuracy and scalability of test
+                oracle generation, reducing development costs, and enabling developers to
+                focus on complex problem-solving rather than repetitive tasks.
+            </p>
+
+            <!-- Key Features -->
+            <h3>Key Features</h3>
+            <ul>
+                <li>
+                    <strong>Transformer-Based Models:</strong> Uses state-of-the-art neural
+                    networks such as CodeBERT for oracle generation, ensuring high accuracy
+                    and generalizability across different software domains.
+                </li>
+                <li>
+                    <strong>Exception Oracles:</strong> Automatically detect and report
+                    runtime errors in code.
+                </li>
+                <li>
+                    <strong>Assertion Oracles:</strong> Verify expected outputs of functions,
+                    ensuring their correctness against defined rules.
+                </li>
+                <li>
+                    <strong>Candidate Ranking:</strong> Evaluates multiple generated oracles
+                    to select the most relevant and accurate ones.
+                </li>
+                <li>
+                    <strong>Dataset Integration:</strong> Utilizes Methods2Test* and Atlas*
+                    datasets for training and evaluation.
+                </li>
+            </ul>
+
+            <!-- Architecture -->
+            <h3>Architecture</h3>
+            <p>
+                The architecture is designed to optimize the process of generating and
+                validating test oracles. It consists of:
+            </p>
+            <ul>
+                <li>
+                    <strong>Input Preprocessor:</strong> Tokenizes and normalizes source code
+                    and test cases.
+                </li>
+                <li>
+                    <strong>Oracle Generator:</strong> A neural network-based model that
+                    creates a variety of test oracle candidates.
+                </li>
+                <li>
+                    <strong>Candidate Ranker:</strong> Uses a scoring system to prioritize and
+                    select the most suitable oracle.
+                </li>
+                <li>
+                    <strong>Validation Module:</strong> Executes selected oracles and compares
+                    results to identify software anomalies.
+                </li>
+            </ul>
+            <div class="project-image">
+                <img
+                    src="static/images/toga-arch.png"
+                    alt="TOGA Architecture"
+                />
+                <figcaption>
+                    Figure 1: Architecture of Automated Test Oracle Generation
+                </figcaption>
+            </div>
+
+            <!-- Implementation Details -->
+            <h3>Implementation Details</h3>
+            <p>
+                The system is built using Python and employs CodeBERT for language modeling.
+                Docker containers are used for deployment, enabling isolated and consistent
+                execution environments. The candidate ranking process involves advanced
+                techniques such as weighted scoring and similarity metrics.
+            </p>
+            <ul>
+                <li>
+                    <strong>Preprocessing:</strong> Tokenizes and processes source code into a
+                    machine-readable format.
+                </li>
+                <li>
+                    <strong>Model Training:</strong> Fine-tuned using transformer
+                    architectures for natural language and code understanding.
+                </li>
+                <li>
+                    <strong>Integration:</strong> APIs developed to connect the system with
+                    CI/CD pipelines.
+                </li>
+            </ul>
+
+            <!-- Challenges and Resolutions -->
+            <h3>Challenges and Resolutions</h3>
+            <p>
+                One major challenge was ensuring model robustness when handling edge cases.
+                By augmenting the dataset with diverse examples, the model's performance
+                improved significantly. Another challenge was optimizing the inference time
+                for real-time applications, addressed by pruning transformer layers and
+                employing lightweight neural models for deployment.
+            </p>
+
+            <!-- Carousel for TOGA Results -->
+            <h3>TOGA Results</h3>
+            <section class="carousel">
+                <div class="carousel-container">
+                    <img src="static/images/rq1_host_machine.png" alt="RQ1 Results">
+                    <img src="static/images/rq2_assertion_host_machine.png" alt="RQ2 Assertion Results">
+                    <img src="static/images/rq2_exception_host_machine.png" alt="RQ2 Exception Results">
+                    <img src="static/images/rq3_table3_FP_host_machine.png" alt="RQ3 False Positives">
+                    <img src="static/images/rq3_table3_host_machine.png" alt="RQ3 Results">
+                </div>
+                <div class="carousel-controls">
+                    <button id="prev">Previous</button>
+                    <button id="next">Next</button>
+                </div>
+            </section>
+
+            <!-- Carousel for Custom Implementation Results -->
+            <h3>Custom Implementation Results</h3>
+            <div class="carousel-container">
+                <img src="static/images/result_2.png" alt="Custom Implementation Results">
+            </div>
+
+            <!-- Results and Evaluation -->
+            <h3>Results and Evaluation</h3>
+            <ul>
+                <li>
+                    <strong>Grammar Coverage:</strong> 85% of developer-written assertions
+                    were accurately reproduced.
+                </li>
+                <li>
+                    <strong>Inference Accuracy:</strong> Achieved 94.5% accuracy in oracle
+                    predictions.
+                </li>
+                <li>
+                    <strong>Bug Detection:</strong> Identified 60 bugs in the Defects4J
+                    dataset with a false positive rate of 0.9%.
+                </li>
+            </ul>
+
+            <!-- Use Cases -->
+            <h3>Use Cases</h3>
+            <ul>
+                <li>Automated unit testing for agile and DevOps teams.</li>
+                <li>Enhanced code review processes with pre-validated test cases.</li>
+                <li>Scalable test generation for large software projects.</li>
+            </ul>
+
+            <!-- Future Work -->
+            <h3>Future Work</h3>
+            <ul>
+                <li>
+                    Expand the dataset to include more complex and domain-specific software
+                    examples.
+                </li>
+                <li>
+                    Integrate advanced language models such as CodeT5 for improved oracle
+                    generation.
+                </li>
+                <li>
+                    Develop a visual dashboard for developers to interact with generated
+                    oracles.
+                </li>
+            </ul>
+
+            <!-- Team Members -->
+            <h3>Team Members</h3>
+            <ul>
+                <li>Love Jayesh Ahir</li>
+                <li>Jheel Nikulkumar Patel</li>
+                <li>Swetha Sajjala</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Love Jayesh Ahir | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

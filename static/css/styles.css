@@ -1,0 +1,420 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 30%; /* Adjust to your desired size */
+    height: auto; /* Allow the height to adjust proportionally */
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the full image is visible without cropping */
+    flex-shrink: 0; /* Prevent image shrinking */
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    pointer-events: all; /* Allow interaction with buttons */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Portfolio Grid */
+.portfolio {
+    text-align: center;
+}
+
+.portfolio h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.portfolio p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.portfolio .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio .card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.portfolio .card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio .card-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* About Page Styling */
+.about-intro, .studies, .experience {
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.study-card, .experience-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.study-card:hover, .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.study-card h3, .experience-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+.study-card p, .experience-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style: disc inside;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin: 0.5rem 0;
+}
+
+/* General Image Styling */
+.about-image img, .study-image img, .experience-image img {
+    width: auto; /* Ensures width adjusts proportionally */
+    height: auto; /* Ensures height adjusts proportionally */
+    max-width: 70%; /* Limits the width to 70% of the container */
+    max-height: 250px; /* Limits the height to 250px */
+    display: block; /* Centers the images */
+    margin: 0 auto 1rem auto; /* Centers the image and adds spacing below */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for a modern look */
+}
+
+/* Project Page Styles */
+.project-detail {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Header */
+.project-detail h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+/* Subheadings */
+.project-detail h3 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+    text-transform: uppercase;
+    border-left: 4px solid #007bff;
+    padding-left: 0.5rem;
+}
+
+/* Paragraphs */
+.project-detail p {
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Lists */
+.project-detail ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-detail ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #555;
+    list-style-type: disc;
+}
+
+/* Images */
+.project-detail img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Figures */
+.project-detail figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.project-detail figure figcaption {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+/* Highlight Boxes */
+.project-detail .highlight {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-left: 4px solid #007bff;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #444;
+    border-radius: 5px;
+}
+
+/* Call to Action Button */
+.project-detail .cta {
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.project-detail .cta:hover {
+    background-color: #0056b3;
+}
+
+/* Tables */
+.project-detail table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.project-detail table th,
+.project-detail table td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+    color: #555;
+}
+
+.project-detail table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-detail h2 {
+        font-size: 2rem;
+    }
+
+    .project-detail h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-detail p,
+    .project-detail ul li {
+        font-size: 1rem;
+    }
+
+    .project-detail table {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
